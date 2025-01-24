@@ -1,0 +1,73 @@
+{
+    "servicios": [
+      {
+        "nombre": "Boxeo",
+        "horarios": [
+          {
+            "dia": "Lunes",
+            "hora": "18:00 - 19:30"
+          },
+          {
+            "dia": "Miércoles",
+            "hora": "18:00 - 19:30"
+          },
+          {
+            "dia": "Viernes",
+            "hora": "17:00 - 18:30"
+          }
+        ],
+        "profesores": ["Carlos Pérez", "Lucía Gómez"],
+        "precios": {
+          "niños": 20,
+          "adultos": 40,
+          "mayores": 30
+        }
+      },
+      {
+        "nombre": "Spinning",
+        "horarios": [
+          {
+            "dia": "Martes",
+            "hora": "07:00 - 08:00"
+          },
+          {
+            "dia": "Jueves",
+            "hora": "20:00 - 21:00"
+          },
+          {
+            "dia": "Sábado",
+            "hora": "10:00 - 11:00"
+          }
+        ],
+        "profesores": ["Ana López", "Pedro Martínez"],
+        "precios": {
+          "niños": 15,
+          "adultos": 35,
+          "mayores": 25
+        }
+      },
+      {
+        "nombre": "Yoga",
+        "horarios": [
+          {
+            "dia": "Lunes",
+            "hora": "08:00 - 09:00"
+          },
+          {
+            "dia": "Miércoles",
+            "hora": "19:00 - 20:30"
+          },
+          {
+            "dia": "Domingo",
+            "hora": "09:00 - 10:30"
+          }
+        ],
+        "profesores": ["Sofía Torres", "Miguel Ruiz"],
+        "precios": {
+          "niños": 10,
+          "adultos": 25,
+          "mayores": 20
+        }
+      }
+    ]
+  }
