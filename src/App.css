@@ -1,0 +1,37 @@
+/* Navbar personalizado */
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050; /* Asegura que esté por encima del contenido */
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem; /* Ajusta el padding para que se vea mejor en tamaños pequeños */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .navbar-custom .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .navbar-custom img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-custom .nav-link,
+  .navbar-custom .nav-dropdown {
+    font-size: 0.9rem;
+  }
+}
+/* Evita que el contenido se solape con el Navbar fijo */
+.App {
+  text-align: center;
+  padding-top: 80px; /* Da espacio para el Navbar fijo */
+}
+
+/* Personalización del NavDropdown (puedes ajustar el tamaño si es necesario) */
+.nav-dropdown-custom {
+  width: auto; /* Ajustar ancho si es necesario */
+}
