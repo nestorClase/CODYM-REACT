@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #585555;
+}
+
+.navbar {
+    background: linear-gradient(to right, red, #585555);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.logo span {
+    color: #585555;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    position: relative; /* Necesario para la posición absoluta del icono */
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    background-color: #585555;
+    border-radius: 25px;
+    padding: 8px;
+    border: none;
+    width: 800px;
+    padding-left: 40px; /* Espacio para la lupa */
+}
+
+.search-icon {
+    position: absolute; /* Lupa sobre la barra */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo del input */
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente la lupa */
+    width: 20px; /* Tamaño de la lupa */
+    height: 20px;
+    pointer-events: none; /* Para que no bloquee los clics en el input */
+}
+
+.social-icons a {
+    margin-left: 15px;
+}
+
+.social-icons img {
+    width: 40px;
+}
+
+.container-fluid img {
+    width: 70px;
+    padding-left: 25px;
+}
+
+.custom-dropdown {
+    position: absolute;
+    top: 125px; /* Ajusta esta distancia según la altura del navbar */
+    left: 15px; /* Ajusta para posicionar debajo del logo */
+}
+
+
+/* Estilo de los elementos del dropdown */
+.dropdown-menu {
+    background-color: #E40505;
+    border: none;
+    display: none; /* Ocultar por defecto */
+}
+
+.dropdown-menu.show {
+    display: block; /* Mostrar cuando se haga clic */
+}
+
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #E40505;
+}
+
+.subelement{
+    left:20px;
+}

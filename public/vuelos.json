@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "title": "Reunión de equipo",
+      "description": "Reunión para discutir el progreso del proyecto.",
+      "status": "pendiente"
+    },
+    {
+      "id": 2,
+      "title": "Desarrollo de nueva funcionalidad",
+      "description": "Implementar la nueva funcionalidad para la aplicación.",
+      "status": "completada"
+    },
+    {
+      "id": 3,
+      "title": "Pruebas de integración",
+      "description": "Realizar las pruebas de integración del sistema.",
+      "status": "pendiente"
+    }
+  ]
