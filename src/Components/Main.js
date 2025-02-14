@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Container, Button, Form, Carousel, Offcanvas, ListGroup } from 'react-bootstrap';
-import "../Styles/menuIndex.css";
+import { Navbar, Container, Button, Form, Carousel, Offcanvas, ListGroup, Row, Col } from 'react-bootstrap';
 import "../Styles/stylesIndex.css";
 import MenuGimnasio from './MenuGlobal';  
 import Logo from "../Img/logo.jpg";
@@ -14,7 +13,6 @@ import Carrusel1 from "../Img/gymCarrousel1.jpg";
 import Carrusel2 from "../Img/gymCarrousel2.jpg";
 import Carrusel3 from "../Img/gymCarrousel3.jpg";
 
-
 const GymApp = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -22,8 +20,7 @@ const GymApp = () => {
 
   return (
     <div>
-
-      <MenuGimnasio/>
+      <MenuGimnasio />
 
       {/* Sidebar */}
       <Offcanvas show={showSidebar} onHide={toggleSidebar} placement="start">
@@ -58,15 +55,19 @@ const GymApp = () => {
       </Offcanvas>
 
       {/* Toggle Button */}
-      <Container className="mt-4">
-        <Button variant="outline-danger" onClick={toggleSidebar}>
-          <i className="fa fa-bars"></i>
-        </Button>
+      <Container fluid className="mt-4">
+        <Row>
+          <Col xs={12} className="text-start">
+            <Button variant="outline-danger" onClick={toggleSidebar}>
+              Mi Perfil <i className="fa fa-bars ms-2"></i>
+            </Button>
+          </Col>
+        </Row>
       </Container>
 
-      {/* Schedule Section */}
-      <section className="d-flex gap-4 mt-5 justify-content-center">
-        <div className="text-center border p-4 shadow-sm">
+      {/* Horario - Container independiente */}
+      <Container className="mt-5 d-flex justify-content-center">
+        <div className="schedule-card text-center border p-4 shadow-sm">
           <h4>
             Nuestro Horario <span className="icon">&#x25BC;</span>
           </h4>
@@ -78,8 +79,10 @@ const GymApp = () => {
           <p>Sábado - 09:00 / 16:00</p>
           <p>Domingo - 09:00 / 16:00</p>
         </div>
+      </Container>
 
-        {/* Carousel */}
+      {/* Carousel */}
+      <Container className="mt-5">
         <div className="carousel-container">
           <Carousel>
             <Carousel.Item>
@@ -117,7 +120,7 @@ const GymApp = () => {
             </Carousel.Item>
           </Carousel>
         </div>
-      </section>
+      </Container>
     </div>
   );
 };
