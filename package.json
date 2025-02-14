@@ -1,10 +1,15 @@
 {
+<<<<<<< HEAD
   "name": "mi-proyecto",
+=======
+  "name": "codymm",
+>>>>>>> 25bbb78984068f2bd9b5711e98e74fd8c11aa10f
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
+<<<<<<< HEAD
     "node-modules": "^1.0.1",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
@@ -12,6 +17,12 @@
     "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.4"
+=======
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.8",
+    "react-dom": "^19.0.0",
+    "react-scripts": "5.0.1"
+>>>>>>> 25bbb78984068f2bd9b5711e98e74fd8c11aa10f
   },
   "scripts": {
     "start": "react-scripts start",
