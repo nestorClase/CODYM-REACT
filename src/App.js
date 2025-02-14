@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import CustomNav from "./Components/Alquiler"
 import Registro from "./Components/Registro"
 import GymApp from "./Components/Main";
@@ -16,19 +15,6 @@ function App() {
           <Route path="/GymApp" element={<GymApp />} />
         </Routes>
       </BrowserRouter>
-=======
-import BarraNavegacion from "./BarraNavegacion";
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <BarraNavegacion />
-      <div className="page-content">
-        
-      </div>
-    </div>
->>>>>>> 25bbb78984068f2bd9b5711e98e74fd8c11aa10f
   );
 }
 
