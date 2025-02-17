@@ -1,5 +1,5 @@
 // BarraNavegacion.js
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import PopupCategoria from "./PopupCategoria"; // Importamos el componente PopupCategoria
 

@@ -23,7 +23,7 @@ const CustomNav = () => {
         <Container fluid>
           <Navbar.Brand href="index.html">
             <img
-              src="/imagenes/logo.jpg"
+              src="/logo.jpg"
               alt="Logo gimnasio"
               height="40"
             />

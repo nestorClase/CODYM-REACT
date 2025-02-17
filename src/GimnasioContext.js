@@ -1,11 +1,10 @@
 import React, { createContext, useEffect, useState } from 'react';
+export const GimnasioContext = createContext();
 
-const GimnasioContext = createContext("Gimnasio");
-
-export const GimnasioProvider  = ({Children}) => {
+export const GimnasioProvider  = ({children}) => {
 
     const [servicios, setServicios] = useState([]);
-
+    
     useEffect(() => {
         fetch("/codymServicios.json")
           .then((response) => {
@@ -21,8 +20,8 @@ export const GimnasioProvider  = ({Children}) => {
       }, []);
 
     return (
-        <GimnasioContext.Provider value = {servicios }>
-            {Children}
+        <GimnasioContext.Provider value = {servicios}>
+            {children}
         </GimnasioContext.Provider>
     )
 

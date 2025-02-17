@@ -8,6 +8,7 @@ import GimnasioProvider from "./GimnasioContext"
 
 function App() {
   return (
+    <GimnasioProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Registro />} />
@@ -15,6 +16,7 @@ function App() {
           <Route path="/GymApp" element={<GymApp />} />
         </Routes>
       </BrowserRouter>
+    </GimnasioProvider>
   );
 }
 

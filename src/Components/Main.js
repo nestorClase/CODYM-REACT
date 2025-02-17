@@ -1,26 +1,17 @@
-import React, { useState } from 'react';
-import { Navbar, Container, Button, Form, Carousel, Offcanvas, ListGroup, Row, Col } from 'react-bootstrap';
+import React, { useContext, useState } from 'react';
+import { Container, Button, Carousel, Offcanvas, ListGroup, Row, Col, Card } from 'react-bootstrap';
 import "../Styles/stylesIndex.css";
-import MenuGimnasio from './MenuGlobal';  
-import Logo from "../Img/logo.jpg";
-import Lupa from "../Img/lupa.png";
-import Linkedin from "../Img/linkedin-removebg-preview.png";
-import Twitter from "../Img/twitter-removebg-preview.png";
-import Insta from "../Img/instagram-removebg-preview.png";
-import Facebook from "../Img/facebook-removebg-preview.png";
-import Profile from "../Img/profilePicture.jpg";
-import Carrusel1 from "../Img/gymCarrousel1.jpg";
-import Carrusel2 from "../Img/gymCarrousel2.jpg";
-import Carrusel3 from "../Img/gymCarrousel3.jpg";
+import MenuGimnasio from './MenuGlobal';
+import { GimnasioContext } from '../GimnasioContext';
 
 const GymApp = () => {
   const [showSidebar, setShowSidebar] = useState(false);
-
+  const servicios = useContext(GimnasioContext);
   const toggleSidebar = () => setShowSidebar(!showSidebar);
 
   return (
     <div>
-      <MenuGimnasio />
+      <MenuGimnasio/>
 
       {/* Sidebar */}
       <Offcanvas show={showSidebar} onHide={toggleSidebar} placement="start">
@@ -31,7 +22,7 @@ const GymApp = () => {
           <ListGroup>
             <ListGroup.Item>
               <img
-                src={Profile}
+                src="/profilePicture.jpg"
                 className="img-thumbnail rounded-circle me-2"
                 alt="Profile"
                 style={{ width: 50, height: 50 }}
@@ -55,7 +46,7 @@ const GymApp = () => {
       </Offcanvas>
 
       {/* Toggle Button */}
-      <Container fluid className="mt-4">
+      <Container fluid className="mt-4 botonPerfil">
         <Row>
           <Col xs={12} className="text-start">
             <Button variant="outline-danger" onClick={toggleSidebar}>
@@ -65,61 +56,110 @@ const GymApp = () => {
         </Row>
       </Container>
 
-      {/* Horario - Container independiente */}
-      <Container className="mt-5 d-flex justify-content-center">
-        <div className="schedule-card text-center border p-4 shadow-sm">
-          <h4>
-            Nuestro Horario <span className="icon">&#x25BC;</span>
-          </h4>
-          <p>Lunes - 08:00 / 22:00</p>
-          <p>Martes - 08:00 / 22:00</p>
-          <p>Miércoles - 08:00 / 22:00</p>
-          <p>Jueves - 08:00 / 22:00</p>
-          <p>Viernes - 08:00 / 22:00</p>
-          <p>Sábado - 09:00 / 16:00</p>
-          <p>Domingo - 09:00 / 16:00</p>
-        </div>
+      {/* Sección Horario y Carrusel en una misma fila */}
+      <Container className="mt-5">
+        <Row>
+          {/* Columna Horario */}
+          <Col md={6} className="mb-4">
+            <div
+              className="schedule-card text-center border p-4 shadow-sm"
+              style={{ margin: '0 10px' }}
+            >
+              <h4>
+                Nuestro Horario <span className="icon">&#x25BC;</span>
+              </h4>
+              <p>Lunes - 08:00 / 22:00</p>
+              <p>Martes - 08:00 / 22:00</p>
+              <p>Miércoles - 08:00 / 22:00</p>
+              <p>Jueves - 08:00 / 22:00</p>
+              <p>Viernes - 08:00 / 22:00</p>
+              <p>Sábado - 09:00 / 16:00</p>
+              <p>Domingo - 09:00 / 16:00</p>
+            </div>
+          </Col>
+
+          {/* Columna Carrusel */}
+          <Col md={6} className="mb-4 d-flex justify-content-center">
+  <div className="carousel-container">
+    <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/curso2.jpg"
+          alt="Rutinas Personalizadas"
+          style={{ width: '300px', height: '300px', objectFit: 'cover' }} // Ajustamos el tamaño de la imagen
+        />
+        <Carousel.Caption>
+          <h5>Rutinas Personalizadas</h5>
+          <p>Entrenadores que adaptan tu rutina según tus metas para optimizar resultados.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/curso1.jpg"
+          alt="Equipos Modernos"
+          style={{ width: '300px', height: '300px', objectFit: 'cover' }} // Ajustamos el tamaño de la imagen
+        />
+        <Carousel.Caption>
+          <h5>Equipos Modernos</h5>
+          <p>Instalaciones de última generación, diseñadas para mejorar tu entrenamiento.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/curso3.jpg"
+          alt="Comunidad Activa"
+          style={{ width: '300px', height: '300px', objectFit: 'cover' }} // Ajustamos el tamaño de la imagen
+        />
+        <Carousel.Caption>
+          <h5>Comunidad Activa</h5>
+          <p>Clases grupales y retos semanales para mantenerte motivado y acompañado.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  </div>
+</Col>
+        </Row>
       </Container>
 
-      {/* Carousel */}
+      {/* Cards de Servicios */}
       <Container className="mt-5">
-        <div className="carousel-container">
-          <Carousel>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={Carrusel1}
-                alt="Rutinas Personalizadas"
-              />
-              <Carousel.Caption>
-                <h5>Rutinas Personalizadas</h5>
-                <p>Entrenadores que adaptan tu rutina según tus metas para optimizar resultados.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={Carrusel2}
-                alt="Equipos Modernos"
-              />
-              <Carousel.Caption>
-                <h5>Equipos Modernos</h5>
-                <p>Instalaciones de última generación, diseñadas para mejorar tu entrenamiento.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={Carrusel3}
-                alt="Comunidad Activa"
-              />
-              <Carousel.Caption>
-                <h5>Comunidad Activa</h5>
-                <p>Clases grupales y retos semanales para mantenerte motivado y acompañado.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-        </div>
+        <Row className="justify-content-center">
+          {servicios && servicios.length > 0 && 
+            servicios.map((servicio, index) => (
+              <Col key={index} md={4} className="mb-4">
+                <Card>
+                  <Card.Body>
+                    <Card.Title>{servicio.nombre}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">Horarios:</Card.Subtitle>
+                    <ul>
+                      {servicio.horarios.map((horario, i) => (
+                        <li key={i}>
+                          {horario.dia}: {horario.hora}
+                        </li>
+                      ))}
+                    </ul>
+                    <Card.Subtitle className="mb-2 text-muted">Profesores:</Card.Subtitle>
+                    <ul>
+                      {servicio.profesores.map((profesor, i) => (
+                        <li key={i}>{profesor}</li>
+                      ))}
+                    </ul>
+                    <Card.Subtitle className="mb-2 text-muted">Precios:</Card.Subtitle>
+                    <ul>
+                      <li>Niños: ${servicio.precios.niños}</li>
+                      <li>Adultos: ${servicio.precios.adultos}</li>
+                      <li>Mayores: ${servicio.precios.mayores}</li>
+                    </ul>
+                    <Button variant="primary">Apuntarse</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))
+          }
+        </Row>
       </Container>
     </div>
   );

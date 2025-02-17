@@ -1,7 +1,6 @@
 
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import Logo from "../Img/logo.jpg";
 
 function MenuGimnasio() {
 
@@ -11,7 +10,7 @@ function MenuGimnasio() {
             <Container>
                 <Navbar.Brand as={Link} to="/">
                 <img
-                src= {Logo}
+                src= "/logo.jpg"
                 height="40"
                 />
                 CODYM
