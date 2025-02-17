@@ -1,27 +1,13 @@
 // BarraNavegacion.js
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import PopupCategoria from "./PopupCategoria"; // Importamos el componente PopupCategoria
 
 const BarraNavegacion = () => {
-  const [servicios, setServicios] = useState([]);
-  const [showModal, setShowModal] = useState(false); // Estado para controlar la visibilidad del modal
+  const servicios = useContext(servicios);
+  const [showModal, setShowModal] = useState(false); 
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
 
-  // Cargar el JSON desde /public/codymServicios.json
-  useEffect(() => {
-    fetch("/codymServicios.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error al cargar el JSON");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setServicios(data.servicios);
-      })
-      .catch((error) => console.error("Error:", error));
-  }, []);
 
   // Función para abrir el modal con los detalles de la categoría
   const handleCategoriaSeleccionada = (categoria) => {
