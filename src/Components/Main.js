@@ -3,16 +3,16 @@ import { Navbar, Container, Button, Form, Carousel, Offcanvas, ListGroup } from 
 import "../Styles/menuIndex.css";
 import "../Styles/stylesIndex.css";
 import MenuGimnasio from './MenuGlobal';  
-import Logo from "../Img/logo.jpg";
-import Lupa from "../Img/lupa.png";
-import Linkedin from "../Img/linkedin-removebg-preview.png";
-import Twitter from "../Img/twitter-removebg-preview.png";
-import Insta from "../Img/instagram-removebg-preview.png";
-import Facebook from "../Img/facebook-removebg-preview.png";
-import Profile from "../Img/profilePicture.jpg";
-import Carrusel1 from "../Img/gymCarrousel1.jpg";
-import Carrusel2 from "../Img/gymCarrousel2.jpg";
-import Carrusel3 from "../Img/gymCarrousel3.jpg";
+const Lupa = "/lupa.png";
+const Linkedin = "/linkedin-removebg-preview.png";
+const Twitter = "/twitter-removebg-preview.png";
+const Insta = "/instagram-removebg-preview.png";
+const Facebook = "/facebook-removebg-preview.png";
+const Profile = "/profilePicture.jpg";
+const Carrusel1 = "/gymCarrousel1.jpg";
+const Carrusel2 = "/gymCarrousel2.jpg";
+const Carrusel3 = "/gymCarrousel3.jpg";
+
 
 
 const GymApp = () => {

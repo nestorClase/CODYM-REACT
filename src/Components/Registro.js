@@ -1,6 +1,7 @@
 import { React, useState } from "react";
-import { Carousel, Button } from 'react-bootstrap';
-import MenuGimnasio from './MenuGlobal';  
+import { Button, Container, Row, Col } from 'react-bootstrap';
+import MenuGimnasio from './MenuGlobal';
+import { Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styleRegistro.css";
 
@@ -26,7 +27,7 @@ const Registro = () => {
     }
     const handleChangeDni = (event) => {
         setDni(event.target.value);
-    } 
+    }
     const handleChangeCuenta = (event) => {
         setCuenta(event.target.value);
     }
@@ -42,110 +43,47 @@ const Registro = () => {
 
     return (
         <div>
+            <MenuGimnasio />
+            
+            <div
+                className="fondo"
+                style={{
+                    backgroundImage: `url('/RegistroFondo.png')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    width: "100%",
+                    height: "100vh",
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    zIndex: -1, 
+                }}
+            >
+                
+            </div>
 
-            <MenuGimnasio/>
+            <Container>
+                <Row className="caja_1">
+                    <Col xs={12} sm={12} md={6} className="mt-3">
+                        <img className="cajaInteriorIzq" src="/LogoRegistro2.png" alt="Logo" />
+                    </Col>
 
-            <Carousel>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="/RegistroFondo.png"
-                        alt="Imagen 1"
-                        style={{ width: "100%", height: "100vh" }}
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="/RegistroFondo2.png"
-                        alt="Imagen 2"
-                        style={{ width: "100%", height: "100vh" }}
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="/RegistroFondo3.png"
-                        alt="Imagen 3"
-                        style={{ width: "100%", height: "100vh" }}
-                    />
-                </Carousel.Item>
-            </Carousel>
-
-            <div className="contenedor_1">
-                <div className="caja_1">
-                    <div className="cajaInteriorIzq">
-                        <img style={{ width: "600px", height: "595px" }} src="/LogoRegistro2.png" alt="Logo" />
-                    </div>
-                    <div className="cajaInteriorDrc">
+                    <Col xs={12} sm={12} md={6} className="cajaInteriorDrc">
                         <h1 style={{ color: "white" }}>¡Empieza a entrenar con nosotros!</h1>
 
-                        <div>
-                            <input
-                                type="text"
-                                value={nombre}
-                                className="caja_texto"
-                                onChange={handleChangeNombre}
-                                placeholder="Nombre y apellidos"
-                            />
-                        </div>
+                        <input type="text" value={nombre} className="caja_texto" onChange={handleChangeNombre} placeholder="Nombre y apellidos" />
+                        <input type="email" className="caja_texto" value={correo} onChange={handleChangeCorreo} placeholder="Correo electrónico" />
+                        <input type="text" className="caja_texto" value={fechaNacimiento} onChange={handleChangeFechaNacimiento} placeholder="Fecha de nacimiento" />
+                        <input type="tel" className="caja_texto" value={telefono} onChange={handleChangeTelefono} placeholder="Número de teléfono" />
+                        <input type="text" className="caja_texto" value={dni} onChange={handleChangeDni} placeholder="DNI" />
+                        <input type="text" value={cuenta} className="caja_texto" onChange={handleChangeCuenta} placeholder="Número de cuenta" />
 
-                        <div>
-                            <input
-                                type="email"
-                                className="caja_texto"
-                                value={correo}
-                                onChange={handleChangeCorreo}
-                                placeholder="Correo electrónico"
-                            />
-                        </div>
+                        <Button onClick={crearCuenta} className="caja_textoRegistro">Registrarse</Button>
 
-                        <div>
-                            <input
-                                type="text"
-                                className="caja_texto"
-                                value={fechaNacimiento}
-                                onChange={handleChangeFechaNacimiento}
-                                placeholder="Fecha de nacimiento"
-                            />
-                        </div>
-
-                        <div>
-                            <input
-                                type="tel"
-                                className="caja_texto"
-                                value={telefono}
-                                onChange={handleChangeTelefono}
-                                placeholder="Número de teléfono"
-                            />
-                        </div>
-
-                        <div>
-                            <input
-                                type="text"
-                                className="caja_texto"
-                                value={dni}
-                                onChange={handleChangeDni}
-                                placeholder="DNI"
-                            />
-                        </div>
-
-                        <div>
-                            <input
-                                type="text"
-                                value={cuenta}
-                                className="caja_texto"
-                                onChange={handleChangeCuenta}
-                                placeholder="Número de cuenta"
-                            />
-                        </div>
-
-                        <div>
-                            <Button variant="primary" onClick={crearCuenta}>Registrarse</Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };
