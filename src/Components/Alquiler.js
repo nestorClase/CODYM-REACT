@@ -1,7 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Carousel, Button, Container, Form, Navbar } from 'react-bootstrap';
 import MenuGimnasio from './MenuGlobal';
-import { GimnasioContext } from '../GimnasioContext';
 
 const CustomNav = () => {
   const [selection, setSelection] = useState('');
@@ -18,6 +17,61 @@ const CustomNav = () => {
     <div>
 
       <MenuGimnasio />
+
+      {/* Header */}
+      <Navbar bg="dark" variant="dark" expand="sm" className="p-3">
+        <Container fluid>
+          <Navbar.Brand href="index.html">
+            <img
+              src="/logo.jpg"
+              alt="Logo gimnasio"
+              height="40"
+            />
+          </Navbar.Brand>
+          <div className="d-flex align-items-center">
+            <Form.Control
+              type="text"
+              placeholder="Buscar..."
+              className="me-2"
+            />
+            <Button variant="outline-light">🔍</Button>
+          </div>
+          <div className="d-flex ms-3">
+            <a href="#">
+              <img
+                src="/imagenes/linkedin-removebg-preview.png"
+                alt="LinkedIn"
+                className="me-2"
+                height="30"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/imagenes/twitter-removebg-preview.png"
+                alt="Twitter"
+                className="me-2"
+                height="30"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/imagenes/instagram-removebg-preview.png"
+                alt="Instagram"
+                className="me-2"
+                height="30"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/imagenes/facebook-removebg-preview.png"
+                alt="Facebook"
+                className="me-2"
+                height="30"
+              />
+            </a>
+          </div>
+        </Container>
+      </Navbar>
 
       {/* Selection Dropdown */}
       <Container className="mt-4">
@@ -39,7 +93,7 @@ const CustomNav = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/multifuncion-1.jpg"
+                src="../imagenes/multifuncion-1.jpg"
                 alt="Máquina 1"
               />
               <Carousel.Caption>
@@ -51,7 +105,7 @@ const CustomNav = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/multipower-1.jpg"
+                src="../imagenes/multipower-1.jpg"
                 alt="Máquina 2"
               />
               <Carousel.Caption>
@@ -63,7 +117,7 @@ const CustomNav = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/cintaDeCorrer.jpg"
+                src="../imagenes/cintaDeCorrer.jpg"
                 alt="Máquina 3"
               />
               <Carousel.Caption>
@@ -83,7 +137,7 @@ const CustomNav = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/boxeo.jpg"
+                src="../imagenes/boxeo.jpg"
                 alt="Clase 1"
               />
               <Carousel.Caption>
@@ -95,7 +149,7 @@ const CustomNav = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/spining.jpg"
+                src="../imagenes/spining.jpg"
                 alt="Clase 2"
               />
               <Carousel.Caption>
@@ -107,7 +161,7 @@ const CustomNav = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/yoga.jpg"
+                src="../imagenes/yoga.jpg"
                 alt="Clase 3"
               />
               <Carousel.Caption>

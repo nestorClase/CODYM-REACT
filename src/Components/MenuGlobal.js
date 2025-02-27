@@ -13,7 +13,7 @@ function MenuGimnasio() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-between">
                     <Nav>
-                        <Nav.Link as={Link} to="/">Servicios</Nav.Link>
+                        <Nav.Link as={Link} to="/GymApp">Servicios</Nav.Link>
                         <Nav.Link as={Link} to="/Alquiler">Alquiler</Nav.Link>
                     </Nav>
 
@@ -21,7 +21,7 @@ function MenuGimnasio() {
                         <Dropdown align="end">
                             <Dropdown.Toggle as="div">
                                 <img
-                                    src="/imagenPersona.png"
+                                    src="/profilePicture.jpg"
                                     alt="Cuenta"
                                     height="40"
                                     className="rounded-circle"

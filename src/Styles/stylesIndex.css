@@ -9,6 +9,7 @@ body {
     background-color: #585555;
 }
 
+
 .navbar {
     background: linear-gradient(to right, red, #585555);
     display: flex;
@@ -59,17 +60,19 @@ body {
     height: 40px;
 }
 
+
 .carousel-container {
-    width: 50%;
-    margin-left: auto;
-    margin-top: 20px; 
+    max-width: 1020px;
+    width: 100%;
+    margin: 20px auto;
     padding: 15px;
-    margin-right: 15%;
+    display: flex;
+    justify-content: center;
     border-radius: 10px;
 }
 
 .carousel-item img {
-    height: 350px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -93,6 +96,7 @@ body {
     color: black;
 }
 
+/* Tarjetas de horario */
 .schedule-card {
     background-color: #333;
     color: #fff;
@@ -100,3 +104,141 @@ body {
     padding: 20px;
     max-width: 300px;
 }
+
+/* Botón Perfil */
+.botonPerfil {
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 150px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #585555;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, red, #585555);
+    display: flex;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 50px;
+    margin: 0 10px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.search-bar input {
+    padding: 8px;
+    background-color: #585555;
+    border-radius: 25px;
+    border: none;
+    width: 100%;
+    padding-left: 40px;
+    color: white;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Ajuste del carrusel para que coincida con las tarjetas */
+.carousel-container {
+    max-width: 1020px; /* Ajustado al ancho de las tarjetas */
+    width: 100%;
+    margin: 20px auto;
+    height: 500px;
+    border-radius: 10px;
+    position: relative;  /* Asegura que esté en el flujo de la página */
+    z-index: 2;  /* Lo coloca por encima de otros elementos */
+    overflow: hidden;  /* Evita que el contenido sobresalga */
+}
+
+
+.carousel-item img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(88, 85, 85, 0.8), rgba(88, 85, 85, 0));
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.carousel-caption-container {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+/* Tarjetas de horario */
+.schedule-card {
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+}
+
+/* Botón Perfil */
+.botonPerfil {
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 150px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+

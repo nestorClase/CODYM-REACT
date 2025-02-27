@@ -1,6 +1,4 @@
 import React, { createContext, useEffect, useState } from 'react';
-
-
 export const GimnasioContext = createContext();
 
 export const GimnasioProvider  = ({children}) => {
@@ -22,7 +20,7 @@ export const GimnasioProvider  = ({children}) => {
       }, []);
 
     return (
-        <GimnasioContext.Provider value = {{servicios}}>
+        <GimnasioContext.Provider value = {servicios}>
             {children}
         </GimnasioContext.Provider>
     )

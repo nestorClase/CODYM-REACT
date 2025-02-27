@@ -3,7 +3,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import MenuGimnasio from './MenuGlobal';
 import { Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styleIniciarSesion.css";
+import "../Styles/styleIniciarSesion.css";
 
 const Iniciar = () => {
     const [correo, setCorreo] = useState("");
