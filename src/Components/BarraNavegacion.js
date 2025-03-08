@@ -5,9 +5,8 @@ import PopupCategoria from "./PopupCategoria"; // Importamos el componente Popup
 
 const BarraNavegacion = () => {
   const servicios = useContext(servicios);
-  const [showModal, setShowModal] = useState(false); 
+  const [showModal, setShowModal] = useState(false);
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
-
 
   // Función para abrir el modal con los detalles de la categoría
   const handleCategoriaSeleccionada = (categoria) => {
@@ -23,40 +22,39 @@ const BarraNavegacion = () => {
 
   return (
     <>
-        <Navbar className="navbar-custom" bg="light" expand="lg">
-      <Container>
-        {/* El logo estará siempre alineado a la izquierda */}
-        <Navbar.Brand href="#home" className="ms-2 me-4">
-          <img
-            src="https://via.placeholder.com/50"
-            alt="Logo"
-            className="d-inline-block align-top"
-            style={{ width: "50px", height: "50px" }}
-          />
-          Mi Gimnasio
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <NavDropdown
-              title="Servicios"
-              id="basic-nav-dropdown"
-              className="text-center"
-            >
-              {servicios.map((servicio, index) => (
-                <NavDropdown.Item
-                  key={index}
-                  onClick={() => handleCategoriaSeleccionada(servicio)}
-                >
-                  {servicio.nombre}
-                </NavDropdown.Item>
-              ))}
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-
+      <Navbar className="navbar-custom" bg="light" expand="lg">
+        <Container>
+          {/* El logo estará siempre alineado a la izquierda */}
+          <Navbar.Brand href="#home" className="ms-2 me-4">
+            <img
+              src="https://via.placeholder.com/50"
+              alt="Logo"
+              className="d-inline-block align-top"
+              style={{ width: "50px", height: "50px" }}
+            />
+            Mi Gimnasio
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <NavDropdown
+                title="Servicios"
+                id="basic-nav-dropdown"
+                className="text-center"
+              >
+                {servicios.map((servicio, index) => (
+                  <NavDropdown.Item
+                    key={index}
+                    onClick={() => handleCategoriaSeleccionada(servicio)}
+                  >
+                    {servicio.nombre}
+                  </NavDropdown.Item>
+                ))}
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
       {/* Popup con los detalles de la categoría seleccionada */}
       <PopupCategoria

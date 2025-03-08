@@ -1,0 +1,64 @@
+{
+  "maquinas": [
+    {
+      "nombre": "Multipower",
+      "funciones": ["Entrenamiento de fuerza", "Ajustable", "Sistema seguro"],
+      "precios": {
+        "alquiler_por_hora": 10
+      },
+      "foto": "multipower-1.jpg"
+    },
+    {
+      "nombre": "Multifuncion",
+      "funciones": ["Ejercicios múltiples", "Versátil", "Diseño compacto"],
+      "precios": {
+        "alquiler_por_hora": 8
+      },
+      "foto": "multifuncion-1.jpg"
+    },
+    {
+      "nombre": "Cinta de correr",
+      "funciones": ["Velocidad ajustable", "Amortiguada", "Pantalla LCD"],
+      "precios": {
+        "alquiler_por_hora": 6
+      },
+      "foto": "cintaDeCorrer.jpg"
+    },
+    {
+      "nombre": "Bicicleta Estática",
+      "funciones": [
+        "Entrenamiento cardiovascular",
+        "Resistencia ajustable",
+        "Pantalla LCD"
+      ],
+      "precios": {
+        "alquiler_por_hora": 7
+      },
+      "foto": "bicicleta_estatica.jpg"
+    },
+    {
+      "nombre": "Elíptica",
+      "funciones": [
+        "Bajo impacto",
+        "Entrenamiento total",
+        "Monitor de ritmo cardiaco"
+      ],
+      "precios": {
+        "alquiler_por_hora": 9
+      },
+      "foto": "eliptica.jpg"
+    },
+    {
+      "nombre": "Máquina de Remo",
+      "funciones": [
+        "Entrenamiento completo",
+        "Resistencia ajustable",
+        "Simulación de remo"
+      ],
+      "precios": {
+        "alquiler_por_hora": 8
+      },
+      "foto": "remo.jpg"
+    }
+  ]
+}
